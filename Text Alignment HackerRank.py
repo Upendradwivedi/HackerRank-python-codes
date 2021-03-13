@@ -1,0 +1,16 @@
+n=int(input())
+w=len(list(bin(n)))-2
+for i in range(1,n+1):
+    a=list(oct(i))
+    del(a[0])
+    del(a[0])
+    b=list(hex(i))
+    del(b[0])
+    del(b[0])
+    c=list(bin(i))
+    del(c[0])
+    del(c[0])
+    a="".join(a)
+    b="".join(b).upper()
+    c="".join(c)
+    print(str(i)+ a.rjust(w) +b.rjust(w) +c.rjust(w))
